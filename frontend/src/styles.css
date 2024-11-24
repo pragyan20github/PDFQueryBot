@@ -1,0 +1,208 @@
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Taskbar */
+.taskbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffa500; /* Orange */
+  padding: 10px 20px;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.new-chat-btn {
+  background-color: #28a745; /* Green */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.new-chat-btn:hover {
+  background-color: #218838;
+}
+
+/* Content Layout */
+.content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 25%;
+  background-color: #fff;
+  padding: 15px;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-list {
+  margin-top: 10px;
+}
+
+.pdf-item {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pdf-item:hover {
+  background-color: #f5f5f5;
+}
+
+.pdf-item.active {
+  background-color: #ffa500;
+  color: white;
+  font-weight: bold;
+}
+
+/* Main Section */
+.main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Upload Section */
+.upload-section {
+  margin-bottom: 20px;
+  background-color: #f8f9fa; /* Light grey */
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Browse Button (blue with grey surrounding) */
+input[type="file"] {
+  background-color: transparent;
+  color: #007bff; /* Blue */
+  border: 1px solid #ccc;
+  padding: 5px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  color: white;
+  cursor: pointer;
+}
+
+.upload-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Chat section */
+.conversation-section {
+  margin-top: 20px;
+  height: calc(100vh - 160px); /* Adjusted to fit page layout */
+  overflow-y: auto;
+  padding-bottom: 70px; /* Prevent overlap with the input bar */
+}
+
+/* Chat Message Bubble Styles */
+.chat-entry {
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 15px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.bot-message {
+  background-color: #e1f5fe; /* Light blue */
+  text-align: left;
+  margin-left: 0;
+  align-self: flex-start;
+}
+
+.user-message {
+  background-color: #c8e6c9; /* Light green */
+  text-align: right;
+  margin-left: auto; /* Align to the right */
+  align-self: flex-end;
+}
+
+/* Ask Question Section at the Bottom */
+.ask-question-section {
+  position: fixed;
+  bottom: 10px;
+  left: 25%; /* Align to the main content */
+  width: 75%; /* Ensure it doesn't overlap with the sidebar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f9fa; /* Light grey */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.ask-question-section input {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.ask-question-section button {
+  background-color: #4caf50; /* Green */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.ask-question-section button:disabled {
+  background-color: #ccc;
+}
+
+/* Error Display */
+.error {
+  color: red;
+  margin-top: 20px;
+}
+
+/* Additional tweaks */
+.sidebar {
+  overflow-y: auto;
+  padding-right: 10px; /* Avoid content sticking to the edge */
+}
+
+.main {
+  padding-left: 20px; /* Prevent content from sticking to the edges */
+}
